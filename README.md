@@ -25,11 +25,13 @@ make checker
 
 It constructs a feasible plan and then improve it with local search:
 
-- Greedy initialization (value-density based)
-  - For each helicopter, repeatedly select a reachable village maximizing estimated value-per-distance.
-  - Load packages by value density subject to caps and weight: choose perishable vs dry (higher density first), then other supplies if beneficial, then remaining food type.
-  - Create one-stop trips (home → village → home) for simplicity and robustness.
-  - Profitability filter: skip trips whose estimated effective value (capped by remaining needs) does not exceed fixed + distance cost.
+- Random Restart
+  - For each helicopter, repeatedly select a route which might contain 1 or more villages
+  - Load packages: with perisahble being the highest priority then dry then other package
+  - Calculate the cost with this random start state
+
+- Local Search
+  - For each new champion soution found try doing local search similar to hill climbing by interchanging some of the villages in each trip
 
 ## How correctness is ensured
 
