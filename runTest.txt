@@ -1,0 +1,9 @@
+make
+./main SampleInputOutput/input1.txt SampleInputOutput/output1.txt
+./format_checker SampleInputOutput/input1.txt SampleInputOutput/output1.txt
+./main SampleInputOutput/input2.txt SampleInputOutput/output2.txt
+./format_checker SampleInputOutput/input2.txt SampleInputOutput/output2.txt
+./main SampleInputOutput/input3.txt SampleInputOutput/output3.txt
+./format_checker SampleInputOutput/input3.txt SampleInputOutput/output3.txt
+./main SampleInputOutput/test.txt SampleInputOutput/testo.txt
+./format_checker SampleInputOutput/test.txt SampleInputOutput/testo.txt
